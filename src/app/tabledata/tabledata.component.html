@@ -1,0 +1,26 @@
+<form (ngSubmit)="Submit()">
+    <label>Name</label>
+    <input type="email" class="form-control" [(ngModel)]="name" name="name">
+    <label>Email</label>
+    <input type="password" class="form-control" [(ngModel)]="email" name="email">
+    <button type="submit" class="btn btn-primary">Submit</button>
+
+</form>
+
+<table  class="table caption-top"*ngIf="submit">
+    <caption>
+        List of users
+    </caption>
+    <thead>
+        <tr>
+            <th scope="col">Name</th>
+            <th scope="col">Email</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>{{name}}</td>
+            <td>{{email}}</td>
+        </tr>
+    </tbody>
+</table>

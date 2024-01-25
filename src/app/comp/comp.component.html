@@ -1,0 +1,35 @@
+<form (ngSubmit)="Submit()">
+    <label>Name</label>
+    <input type="email" class="form-control" [(ngModel)]="name" name="name">
+    <label>Email</label>
+    <input type="email" class="form-control" [(ngModel)]="email" name="email">
+    <label>Branch</label>
+    <input type="text" class="form-control" [(ngModel)]="branch" name="branch">
+    <label>Password</label>
+    <input type="password" class="form-control" [(ngModel)]="password" name="password">
+    
+    <button type="submit" class="btn btn-primary">Submit</button>
+
+</form>
+
+<table  class="table caption-top"*ngIf="submit">
+    <caption>
+        List of users
+    </caption>
+    <thead>
+        <tr >
+            <th scope="col">Name</th>
+            <th scope="col">Email</th>
+            <th scope="col">Branch</th>
+            <th scope="col">Password</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor ="let user of dataArray">
+            <td>{{user.username}}</td>
+            <td>{{user.useremail}}</td>
+            <td>{{user.userbranch}}</td>
+            <td>{{user.userpassword}}</td>
+        </tr>
+    </tbody>
+</table>
